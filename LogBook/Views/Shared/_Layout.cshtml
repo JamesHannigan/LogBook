@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LogBook</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LogBook.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/System/Navigation.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script> @* HTMX *@
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                @* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> *@
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center">
+                    <ul class="nav navbar-nav flex-grow-1 justify-content-center fw-normal">
+                        <li class="nav-item">
+                            <a class="nav-link text-light @(ViewData["NavigationControl"]?.ToString() == "Account" ? "active" : "")" asp-area="" asp-controller="Account" asp-action="Index">Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light @(ViewData["NavigationControl"]?.ToString() == "Projects" ? "active" : "")" asp-area="" asp-controller="Projects" asp-action="Index">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <h5 class="m-0"><a class="nav-link text-light @(ViewData["NavigationControl"]?.ToString() == "Home" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">LogBook</a></h5>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light @(ViewData["NavigationControl"]?.ToString() == "Activity" ? "active" : "")" asp-area="" asp-controller="Activity" asp-action="Index">Activity</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light @(ViewData["NavigationControl"]?.ToString() == "Documentation" ? "active" : "")" asp-area="" asp-controller="Documentation" asp-action="Index">Documentation</a>
+                        </li>
+                    </ul>
+                    <div class="underline"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - LogBook - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="~/js/System/Navigation.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)

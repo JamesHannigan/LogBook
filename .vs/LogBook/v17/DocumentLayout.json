@@ -1,0 +1,194 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|c:\\users\\james - personal\\source\\repos\\logbook\\logbook\\wwwroot\\js\\activity.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|solutionrelative:logbook\\wwwroot\\js\\activity.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBE554F0-3C41-4B10-A14C-01845663838A}|LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj|c:\\users\\james - personal\\source\\repos\\logbook\\logbook.businesslogic\\service\\data\\activityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBE554F0-3C41-4B10-A14C-01845663838A}|LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj|solutionrelative:logbook.businesslogic\\service\\data\\activityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|c:\\users\\james - personal\\source\\repos\\logbook\\logbook\\controllers\\activitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|solutionrelative:logbook\\controllers\\activitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE2E0A8C-563A-450F-8630-FC0410DA822A}|LogBook.Data\\LogBook.Data.csproj|c:\\users\\james - personal\\source\\repos\\logbook\\logbook.data\\repository\\data\\activityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE2E0A8C-563A-450F-8630-FC0410DA822A}|LogBook.Data\\LogBook.Data.csproj|solutionrelative:logbook.data\\repository\\data\\activityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBE554F0-3C41-4B10-A14C-01845663838A}|LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj|c:\\users\\james - personal\\source\\repos\\logbook\\logbook.businesslogic\\interface\\data\\iactivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBE554F0-3C41-4B10-A14C-01845663838A}|LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj|solutionrelative:logbook.businesslogic\\interface\\data\\iactivityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE2E0A8C-563A-450F-8630-FC0410DA822A}|LogBook.Data\\LogBook.Data.csproj|c:\\users\\james - personal\\source\\repos\\logbook\\logbook.data\\interface\\data\\iactivityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE2E0A8C-563A-450F-8630-FC0410DA822A}|LogBook.Data\\LogBook.Data.csproj|solutionrelative:logbook.data\\interface\\data\\iactivityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|c:\\users\\james - personal\\source\\repos\\logbook\\logbook\\controllers\\systemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|solutionrelative:logbook\\controllers\\systemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|c:\\users\\james - personal\\source\\repos\\logbook\\logbook\\views\\activity\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|solutionrelative:logbook\\views\\activity\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|c:\\users\\james - personal\\source\\repos\\logbook\\logbook\\views\\projects\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|solutionrelative:logbook\\views\\projects\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|c:\\users\\james - personal\\source\\repos\\logbook\\logbook\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EFA3F800-2B64-4860-BF6F-18C1E65E4A38}|LogBook\\LogBook.csproj|solutionrelative:logbook\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 227,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\Views\\Activity\\Index.cshtml",
+              "RelativeDocumentMoniker": "LogBook\\Views\\Activity\\Index.cshtml",
+              "ToolTip": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\Views\\Activity\\Index.cshtml",
+              "RelativeToolTip": "LogBook\\Views\\Activity\\Index.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-18T16:56:04.187Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Activity.js",
+              "DocumentMoniker": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\wwwroot\\js\\Activity.js",
+              "RelativeDocumentMoniker": "LogBook\\wwwroot\\js\\Activity.js",
+              "ToolTip": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\wwwroot\\js\\Activity.js",
+              "RelativeToolTip": "LogBook\\wwwroot\\js\\Activity.js",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAgwFMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-26T19:49:07.519Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "LogBook\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "LogBook\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-12T21:41:47.569Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ActivityService.cs",
+              "DocumentMoniker": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.BusinessLogic\\Service\\Data\\ActivityService.cs",
+              "RelativeDocumentMoniker": "LogBook.BusinessLogic\\Service\\Data\\ActivityService.cs",
+              "ToolTip": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.BusinessLogic\\Service\\Data\\ActivityService.cs",
+              "RelativeToolTip": "LogBook.BusinessLogic\\Service\\Data\\ActivityService.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAwwDwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T16:11:41.195Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ActivityController.cs",
+              "DocumentMoniker": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\Controllers\\ActivityController.cs",
+              "RelativeDocumentMoniker": "LogBook\\Controllers\\ActivityController.cs",
+              "ToolTip": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\Controllers\\ActivityController.cs",
+              "RelativeToolTip": "LogBook\\Controllers\\ActivityController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAADwvw8AAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T20:40:09.986Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IActivityService.cs",
+              "DocumentMoniker": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.BusinessLogic\\Interface\\Data\\IActivityService.cs",
+              "RelativeDocumentMoniker": "LogBook.BusinessLogic\\Interface\\Data\\IActivityService.cs",
+              "ToolTip": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.BusinessLogic\\Interface\\Data\\IActivityService.cs",
+              "RelativeToolTip": "LogBook.BusinessLogic\\Interface\\Data\\IActivityService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T22:15:21.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IActivityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.Data\\Interface\\Data\\IActivityRepository.cs",
+              "RelativeDocumentMoniker": "LogBook.Data\\Interface\\Data\\IActivityRepository.cs",
+              "ToolTip": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.Data\\Interface\\Data\\IActivityRepository.cs",
+              "RelativeToolTip": "LogBook.Data\\Interface\\Data\\IActivityRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAACgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T22:11:09.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SystemController.cs",
+              "DocumentMoniker": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\Controllers\\SystemController.cs",
+              "RelativeDocumentMoniker": "LogBook\\Controllers\\SystemController.cs",
+              "ToolTip": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\Controllers\\SystemController.cs",
+              "RelativeToolTip": "LogBook\\Controllers\\SystemController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAWwBMAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T22:03:24.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\Views\\Projects\\Index.cshtml",
+              "RelativeDocumentMoniker": "LogBook\\Views\\Projects\\Index.cshtml",
+              "ToolTip": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook\\Views\\Projects\\Index.cshtml",
+              "RelativeToolTip": "LogBook\\Views\\Projects\\Index.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAACeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T21:55:36.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ActivityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.Data\\Repository\\Data\\ActivityRepository.cs",
+              "RelativeDocumentMoniker": "LogBook.Data\\Repository\\Data\\ActivityRepository.cs",
+              "ToolTip": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.Data\\Repository\\Data\\ActivityRepository.cs",
+              "RelativeToolTip": "LogBook.Data\\Repository\\Data\\ActivityRepository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAMwBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T21:36:27.642Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

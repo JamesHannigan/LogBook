@@ -1,0 +1,14 @@
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\bin\Debug\net8.0\LogBook.Data.deps.json
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\bin\Debug\net8.0\LogBook.Data.dll
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\bin\Debug\net8.0\LogBook.Data.pdb
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\obj\Debug\net8.0\LogBook.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\obj\Debug\net8.0\LogBook.Data.AssemblyInfoInputs.cache
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\obj\Debug\net8.0\LogBook.Data.AssemblyInfo.cs
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\obj\Debug\net8.0\LogBook.Data.csproj.CoreCompileInputs.cache
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\obj\Debug\net8.0\LogBook.Data.dll
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\obj\Debug\net8.0\refint\LogBook.Data.dll
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\obj\Debug\net8.0\LogBook.Data.pdb
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\obj\Debug\net8.0\ref\LogBook.Data.dll
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\obj\Debug\net8.0\LogBook.Data.csproj.AssemblyReference.cache
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\bin\Debug\net8.0\LogBook.Data.runtimeconfig.json
+C:\Users\james_4f2zzjl\source\repos\LogBook\LogBook.Data\obj\Debug\net8.0\LogBook.Data.genruntimeconfig.cache

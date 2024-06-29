@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Activity";
+    ViewData["NavigationControl"] = "Activity";
+}
+
+<style>
+    .selectedFilter {
+        background-color: #f0f1f2 !important;
+    }
+</style>
+
+@* Filters inspiration - https://www.myntra.com/men-tshirts *@
+<div class="container m-0 p-0">
+    <div class="row m-0 p-0">
+        <div id="filtersRow" class="col m-0 p-0 cursor-default"></div>
+    </div>
+    <div id="subFiltersRow" class="row m-0 mt-2 p-0 d-none">
+        <div id="subFilters" class="col m-0 p-0 cursor-default"></div>
+    </div>
+</div>
+<hr style="height: 1px; border: 0; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);" />
+<table class="table table-hover small">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Path</th>
+            <th>Project</th>
+            <th>User</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody id="logsTable" hx-trigger="load" hx-indicator="#summaryLoading"></tbody>
+</table>
+
+<div id="summaryLoading" class="text-center htmx-indicator">
+    <div class="spinner-border" role="status"><span class="sr-only"></span></div>
+</div>
+
+<script src="~/js/Activity.js" asp-append-version="true"></script>
