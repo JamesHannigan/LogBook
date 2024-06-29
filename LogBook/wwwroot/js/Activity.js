@@ -75,7 +75,7 @@ function toggleFilters(selectedFilter) {
         filtersRow.removeClass("d-none");
     }
 
-    function toggleSubFilter(this) {
+    //function toggleSubFilter(this) {
         //let typeQuery = urlParams.get('Type');
 
         //Get the name of the url param
@@ -95,5 +95,5 @@ function toggleFilters(selectedFilter) {
         //reload subfilters
 
         //Reload logs data
-    }
+    //}
 }

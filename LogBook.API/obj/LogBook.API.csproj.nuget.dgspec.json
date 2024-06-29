@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.API\\LogBook.API.csproj": {}
+    "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.API\\LogBook.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.API\\LogBook.API.csproj": {
+    "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.API\\LogBook.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.API\\LogBook.API.csproj",
+        "projectUniqueName": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.API\\LogBook.API.csproj",
         "projectName": "LogBook.API",
-        "projectPath": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.API\\LogBook.API.csproj",
-        "packagesPath": "C:\\Users\\James - Personal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.API\\obj\\",
+        "projectPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.API\\LogBook.API.csproj",
+        "packagesPath": "C:\\Users\\james_4f2zzjl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\James - Personal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\james_4f2zzjl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

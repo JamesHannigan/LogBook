@@ -9,51 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LogBook
 build_property.RootNamespace = LogBook
-build_property.ProjectDir = C:\Users\James - Personal\source\repos\LogBook\LogBook\
+build_property.ProjectDir = C:\Users\james_4f2zzjl\source\repos\LogBookNew\LogBook\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\James - Personal\source\repos\LogBook\LogBook
+build_property.MSBuildProjectDirectory = C:\Users\james_4f2zzjl\source\repos\LogBookNew\LogBook
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/James - Personal/source/repos/LogBook/LogBook/Views/Account/Index.cshtml]
+[C:/Users/james_4f2zzjl/source/repos/LogBookNew/LogBook/Views/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/James - Personal/source/repos/LogBook/LogBook/Views/Activity/Index.cshtml]
+[C:/Users/james_4f2zzjl/source/repos/LogBookNew/LogBook/Views/Activity/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0aXZpdHlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/James - Personal/source/repos/LogBook/LogBook/Views/Documentation/Index.cshtml]
+[C:/Users/james_4f2zzjl/source/repos/LogBookNew/LogBook/Views/Documentation/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRhdGlvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/James - Personal/source/repos/LogBook/LogBook/Views/Home/Index.cshtml]
+[C:/Users/james_4f2zzjl/source/repos/LogBookNew/LogBook/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/James - Personal/source/repos/LogBook/LogBook/Views/Projects/Index.cshtml]
+[C:/Users/james_4f2zzjl/source/repos/LogBookNew/LogBook/Views/Projects/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/James - Personal/source/repos/LogBook/LogBook/Views/Shared/Error.cshtml]
+[C:/Users/james_4f2zzjl/source/repos/LogBookNew/LogBook/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/James - Personal/source/repos/LogBook/LogBook/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/james_4f2zzjl/source/repos/LogBookNew/LogBook/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/James - Personal/source/repos/LogBook/LogBook/Views/_ViewImports.cshtml]
+[C:/Users/james_4f2zzjl/source/repos/LogBookNew/LogBook/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/James - Personal/source/repos/LogBook/LogBook/Views/_ViewStart.cshtml]
+[C:/Users/james_4f2zzjl/source/repos/LogBookNew/LogBook/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/James - Personal/source/repos/LogBook/LogBook/Views/Shared/_Layout.cshtml]
+[C:/Users/james_4f2zzjl/source/repos/LogBookNew/LogBook/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hrjkf3sj9d

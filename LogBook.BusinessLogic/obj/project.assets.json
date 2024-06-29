@@ -2941,19 +2941,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\James - Personal\\.nuget\\packages\\": {}
+    "C:\\Users\\james_4f2zzjl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
       "projectName": "LogBook.BusinessLogic",
-      "projectPath": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
-      "packagesPath": "C:\\Users\\James - Personal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.BusinessLogic\\obj\\",
+      "projectPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
+      "packagesPath": "C:\\Users\\james_4f2zzjl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\James - Personal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\james_4f2zzjl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2967,8 +2967,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.Data\\LogBook.Data.csproj": {
-              "projectPath": "C:\\Users\\James - Personal\\source\\repos\\LogBook\\LogBook.Data\\LogBook.Data.csproj"
+            "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.Data\\LogBook.Data.csproj": {
+              "projectPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.Data\\LogBook.Data.csproj"
             }
           }
         }
