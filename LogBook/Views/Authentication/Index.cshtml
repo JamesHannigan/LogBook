@@ -1,0 +1,99 @@
+﻿<script src="/js/Authentication.js" asp-append-version="true"></script>
+
+<div class="container mt-5">
+    <!-- Login Form -->
+    <div id="loginForm" class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h3 class="mt-2">Login</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/Authentication/SignIn" method="post">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Username or Email address</label>
+                            <input type="text" class="form-control" id="loginEmail" aria-describedby="emailHelp" name="loginNameOrEmail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" name="loginPassword">
+                            <p class="mt-2 small text-end"><a class="text-white cursor-pointer" onclick="openOption('Forgotten')">Forgotten Password?</a></p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="loginIsPersistent" name="loginIsPersistent">
+                                <label class="form-check-label" for="loginIsPersistent">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <p class="mt-2 small text-center">Or <a class="text-white cursor-pointer" onclick="openOption('Register')">Click Here to Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Form -->
+    <div id="registerForm" class="row justify-content-center d-none">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center">
+                    <div class="row mt-2">
+                        <div class="col-2">
+                            <h3 class=""><a class="cursor-pointer" onclick="openOption('Login')"><i class="fa-solid fa-circle-arrow-left text-body"></i></a></h3>
+                        </div>
+                        <div class="col-8">
+                            <h3>Register</h3>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="registerEmail" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="registerPassword">
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="registerConfirmPassword">
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgotten Password Form -->
+    <div id="forgottenPasswordForm" class="row justify-content-center d-none">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center">
+                    <div class="row mt-2">
+                        <div class="col-2">
+                            <h3 class=""><a class="cursor-pointer" onclick="openOption('Login')"><i class="fa-solid fa-circle-arrow-left text-body"></i></a></h3>
+                        </div>
+                        <div class="col-8">
+                            <h3>Forgotten Password</h3>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="forgottenEmail" class="form-label">Username or Email address</label>
+                            <input type="email" class="form-control" id="forgottenEmail" aria-describedby="emailHelp">
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Reset Password</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -98,6 +98,12 @@ namespace LogBook.Data.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -120,6 +126,9 @@ namespace LogBook.Data.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<DateTime?>("Registered")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -186,6 +195,9 @@ namespace LogBook.Data.Migrations
                     b.Property<DateTime?>("Deleted")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("Level")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -219,9 +231,52 @@ namespace LogBook.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("PublicId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.ToTable("Projects", "Data");
+                });
+
+            modelBuilder.Entity("LogBook.Data.Models.ProjectAssignment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AssigneeId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Deleted")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("InviteAccepted")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("InvitedById")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoleType")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssigneeId");
+
+                    b.HasIndex("InvitedById");
+
+                    b.HasIndex("ProjectId");
+
+                    b.ToTable("ProjectsAssignments", "Data");
                 });
 
             modelBuilder.Entity("LogBook.Data.Models.Tenant", b =>
@@ -423,6 +478,29 @@ namespace LogBook.Data.Migrations
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Project");
+                });
+
+            modelBuilder.Entity("LogBook.Data.Models.ProjectAssignment", b =>
+                {
+                    b.HasOne("LogBook.Data.Models.ApplicationUser", "Assignee")
+                        .WithMany()
+                        .HasForeignKey("AssigneeId");
+
+                    b.HasOne("LogBook.Data.Models.ApplicationUser", "InvitedBy")
+                        .WithMany()
+                        .HasForeignKey("InvitedById");
+
+                    b.HasOne("LogBook.Data.Models.Project", "Project")
+                        .WithMany()
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Assignee");
+
+                    b.Navigation("InvitedBy");
 
                     b.Navigation("Project");
                 });

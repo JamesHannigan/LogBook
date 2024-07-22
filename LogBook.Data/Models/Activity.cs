@@ -9,6 +9,7 @@ namespace LogBook.Data.Models
         public int? LogTypeId { get; set; }
         public LogType? LogType { get; set; }
         public string? Description { get; set; }
+        //public double? Figure { get; set; }
         public string? Path { get; set; }
         public int? UserID { get; set; }
         public string? UserName { get; set; }

@@ -1,62 +1,123 @@
-﻿<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+﻿@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - LogBook</title>
+    <link rel="icon" href="/images/spider-solid-white.svg" type="image/icon type">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LogBook.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/System/Navigation.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="@("https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5.0.16/dark.min.css")">
+    @* <link rel="stylesheet" href="/lib/sweetalert2/sweetalert2.css"></link> *@
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap-daterangepicker/daterangepicker.css" />
+
+    <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script> @* HTMX *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script> @* HTMX *@
+    <script src="~/lib/moment.js/moment.min.js"></script>
+    <script src="~/lib/sweetalert2/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap-daterangepicker/daterangepicker.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @* <script src="~/lib/datetime-moment.js"></script> *@
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                @* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> *@
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center">
-                    <ul class="nav navbar-nav flex-grow-1 justify-content-center fw-normal">
-                        <li class="nav-item">
-                            <a class="nav-link text-light @(ViewData["NavigationControl"]?.ToString() == "Account" ? "active" : "")" asp-area="" asp-controller="Account" asp-action="Index">Account</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light @(ViewData["NavigationControl"]?.ToString() == "Projects" ? "active" : "")" asp-area="" asp-controller="Projects" asp-action="Index">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <h5 class="m-0"><a class="nav-link text-light @(ViewData["NavigationControl"]?.ToString() == "Home" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">LogBook</a></h5>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light @(ViewData["NavigationControl"]?.ToString() == "Activity" ? "active" : "")" asp-area="" asp-controller="Activity" asp-action="Index">Activity</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light @(ViewData["NavigationControl"]?.ToString() == "Documentation" ? "active" : "")" asp-area="" asp-controller="Documentation" asp-action="Index">Documentation</a>
-                        </li>
-                    </ul>
-                    <div class="underline"></div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <div class="container-fluid m-0 p-0">
+        <div class="row m-0 p-0">
+            <div class="col-2 m-0 p-0 border-end border-1" style="min-height: 100vh;">
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - LogBook - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+                <div class="flex-shrink-0">
+                    <a href="/" class="d-flex align-items-center p-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+                        <i class="fa-solid fa-spider"></i>&nbsp;&nbsp;<span class="fs-5 fw-semibold">LogBook</span>
+                    </a>
+                    <ul class="list-unstyled ps-0">
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <li class="mb-1 ms-2">
+                                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
+                                    Dashboard
+                                </button>
+                                    <div class="collapse @(ViewData["NavigationControl"]?.ToString() == "Home" ? "show" : "")" id="dashboard-collapse">
+                                    <ul id="navigationDashboardList" class="btn-toggle-nav list-unstyled fw-normal ps-4 pb-1 small"></ul>
+                                </div>
+                            </li>
+                            <li class="mb-1 ms-2">
+                                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#logs-collapse" aria-expanded="false">
+                                    Logs
+                                </button>
+                                    <div class="collapse @(ViewData["NavigationControl"]?.ToString() == "Activity" ? "show" : "")" id="logs-collapse">
+                                    <ul id="navigationActivityList" class="btn-toggle-nav list-unstyled fw-normal ps-4 pb-1 small"></ul>
+                                </div>
+                            </li>
+                            <li class="mb-1 ms-2">
+                                <a class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0" href="/Configuration">
+                                    Configuration
+                                </a>
+                            </li>
+                        }
+
+                        <li class="mb-1 ms-2">
+                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#documentation-collapse" aria-expanded="false">
+                                Documentation
+                            </button>
+                            <div class="collapse @(ViewData["NavigationControl"]?.ToString() == "Documentation" ? "show" : "")" id="documentation-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal ps-4 pb-1 small">
+                                    <li><a href="/Documentation" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Getting Started</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <li class="border-top my-3"></li>
+                            <li class="mb-1 ms-2">
+                                <a class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0" href="/Account">
+                                    Account
+                                </a>
+                            </li>
+                        }
+                        <li class="border-top my-3"></li>
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <li class="mb-1 ms-2">
+                                <a href="/Authentication/SignOut" class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0">
+                                    Sign Out
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="mb-1 ms-2">
+                                <a href="/Authentication" class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0">
+                                    Sign In or Register
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="b-example-divider b-example-vr"></div>
+            </div>
+
+
+            <div class="col-10 m-0 p-0 p-4">
+                <main role="main" class="p-0">
+                    @RenderBody()
+                </main>
+            </div>
         </div>
-    </footer>
+    </div>
 </body>
 </html>
-<script src="~/js/System/Navigation.js" asp-append-version="true"></script>
+
 @await RenderSectionAsync("Scripts", required: false)

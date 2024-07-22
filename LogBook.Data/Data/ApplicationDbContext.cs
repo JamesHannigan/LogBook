@@ -7,6 +7,9 @@ namespace LogBook.DataLayer
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Activity> Logs { get; set; }
+        public DbSet<LogType> LogTypes { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectAssignment> ProjectAssignments { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 
@@ -19,6 +22,7 @@ namespace LogBook.DataLayer
             modelBuilder.Entity<LogType>().ToTable("LogTypes", "Data");
             modelBuilder.Entity<Activity>().ToTable("Logs", "Data");
             modelBuilder.Entity<Project>().ToTable("Projects", "Data");
+            modelBuilder.Entity<ProjectAssignment>().ToTable("ProjectsAssignments", "Data");
             modelBuilder.Entity<Tenant>().ToTable("Tenant", "Data");
             modelBuilder.Entity<ErrorLog>().ToTable("ErrorLogs", "Data");
         }

@@ -1,8 +1,10 @@
 ﻿using LogBook.BusinessLogic.Interface.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LogBook.Controllers
 {
+    [Authorize]
     public class ActivityController : Controller
     {
         private readonly IActivityService _activityService;
@@ -10,9 +12,13 @@ namespace LogBook.Controllers
         {
             _activityService = activityService;
         }
+
         public IActionResult Index() => View();
 
         [HttpGet]
-        public string GetActivitiesAsTableRowsAsync(string? type = null) => _activityService.GetActivitiesAsTableRows(type);
+        public async Task<IActionResult> GetFiltersDataAsync() => Json(await _activityService.GetFiltersData());
+
+        [HttpGet]
+        public string GetActivitiesAsTableRows(string? start, string? end, string? project = null, string? type = null, string? user = null) => _activityService.GetActivitiesAsTableRows(start, end, project, type);
     }
 }

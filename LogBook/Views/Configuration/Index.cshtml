@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Configuration";
+    ViewData["NavigationControl"] = "Configuration";
+}
+<div class="container-fluid m-0 p-0">
+    <div class="row m-0 p-0">
+        <div class="col-6 m-0 p-0 text-start mb-3">
+            <h5 class="display-6 fw-semibold">Configuration</h5>
+        </div>
+        <div class="col-6 m-0 p-0 text-end mb-3">
+            <form class="w-50" hx-post="/Configuration/CreateProject" hx-on::after-request="if(event.detail.successful) htmx.ajax('GET', '/Configuration/GetProjects', '#projects')">
+                <input class="form-control w-100" type="text" id="name" name="name" placeholder="Create a new Project">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div id="projects" class="row" hx-get="/Configuration/GetProjects" hx-trigger="load" hx-indicator="#summaryLoading"></div>
+    <div id="summaryLoading" class="text-center htmx-indicator">
+        <div class="spinner-border" role="status"><span class="sr-only"></span></div>
+    </div>
+</div>
+
+<script src="~/js/System/Configuration.js" asp-append-version="true"></script>

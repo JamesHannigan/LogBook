@@ -3,6 +3,7 @@
     public enum ProjectRole
     {
         Member,
-        Owner
+        Owner,
+        Creator
     }
 }

@@ -1,4 +1,5 @@
-﻿using LogBook.Data.Interface.Data;
+﻿using LogBook.Data.Enum;
+using LogBook.Data.Interface.Data;
 using LogBook.Data.Models;
 using LogBook.DataLayer;
 using LogBook.DataLayer.Repositories;
@@ -12,11 +13,14 @@ namespace LogBook.Data.Repository.Data
         {
         }
 
-        public List<Activity> GetLogsByProjectID(int projectId, List<int>? logTypes)
+        public List<Activity> GetLogsByFilters(DateTime start, DateTime end, List<Guid>? projectIds, List<TypeLevel>? logTypes)
         {
             return _context.Logs.AsQueryable()
-                .Where(t => t.ProjectId == projectId)
-                .Where(t => (logTypes == null) || (logTypes != null && t.LogTypeId.HasValue && logTypes.Contains(t.LogTypeId.Value)))
+                .Where(t => 
+                    (t.Timestamp.HasValue && t.Timestamp.Value > start && t.Timestamp.Value < end) ||
+                    (!t.Timestamp.HasValue && t.Created > start && t.Created < end))
+                .Where(t => (projectIds == null) || (projectIds != null && projectIds.Contains(t.Project.PublicId)))
+                .Where(t => (logTypes == null) || (logTypes != null && t.LogType != null && logTypes.Contains(t.LogType.Level)))
                 .Include(x => x.Project)
                 .Include(x => x.LogType)
                 .ToList();

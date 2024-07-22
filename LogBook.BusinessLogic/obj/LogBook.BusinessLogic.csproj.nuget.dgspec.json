@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj": {}
+    "D:\\LogBook 22-07-2024\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj": {
+    "D:\\LogBook 22-07-2024\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
+        "projectUniqueName": "D:\\LogBook 22-07-2024\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
         "projectName": "LogBook.BusinessLogic",
-        "projectPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
-        "packagesPath": "C:\\Users\\james_4f2zzjl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.BusinessLogic\\obj\\",
+        "projectPath": "D:\\LogBook 22-07-2024\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
+        "packagesPath": "C:\\Users\\James - Personal\\.nuget\\packages\\",
+        "outputPath": "D:\\LogBook 22-07-2024\\LogBook.BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\james_4f2zzjl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\James - Personal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.Data\\LogBook.Data.csproj": {
-                "projectPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.Data\\LogBook.Data.csproj"
+              "D:\\LogBook 22-07-2024\\LogBook.Data\\LogBook.Data.csproj": {
+                "projectPath": "D:\\LogBook 22-07-2024\\LogBook.Data\\LogBook.Data.csproj"
               }
             }
           }
@@ -48,6 +48,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,17 +74,17 @@
         }
       }
     },
-    "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.Data\\LogBook.Data.csproj": {
+    "D:\\LogBook 22-07-2024\\LogBook.Data\\LogBook.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.Data\\LogBook.Data.csproj",
+        "projectUniqueName": "D:\\LogBook 22-07-2024\\LogBook.Data\\LogBook.Data.csproj",
         "projectName": "LogBook.Data",
-        "projectPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.Data\\LogBook.Data.csproj",
-        "packagesPath": "C:\\Users\\james_4f2zzjl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.Data\\obj\\",
+        "projectPath": "D:\\LogBook 22-07-2024\\LogBook.Data\\LogBook.Data.csproj",
+        "packagesPath": "C:\\Users\\James - Personal\\.nuget\\packages\\",
+        "outputPath": "D:\\LogBook 22-07-2024\\LogBook.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\james_4f2zzjl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\James - Personal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

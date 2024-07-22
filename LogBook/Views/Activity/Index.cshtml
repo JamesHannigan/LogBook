@@ -1,21 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Activity";
+    ViewData["Title"] = "Logs";
     ViewData["NavigationControl"] = "Activity";
 }
 
 <style>
     .selectedFilter {
-        background-color: #f0f1f2 !important;
+        background-color: #2a2d32 !important;
+    }
+
+    .daterangepicker {
+        border-color: #4b5057 !important;
+    }
+
+    .daterangepicker .ranges {
+        background-color: #2a2d32;
+    }
+
+    .daterangepicker .ranges li:hover {
+        background-color: #212529;
     }
 </style>
+
+<div class="text-start mb-3">
+    <h5 class="display-6 fw-semibold">Logs</h5>
+</div>
 
 @* Filters inspiration - https://www.myntra.com/men-tshirts *@
 <div class="container m-0 p-0">
     <div class="row m-0 p-0">
         <div id="filtersRow" class="col m-0 p-0 cursor-default"></div>
     </div>
-    <div id="subFiltersRow" class="row m-0 mt-2 p-0 d-none">
-        <div id="subFilters" class="col m-0 p-0 cursor-default"></div>
+    <div id="subFiltersRow" class="row m-0 mt-1 p-0 d-none">
+        <div id="subFilters" class="col m-0 p-0 cursor-default lh-lg"></div>
     </div>
 </div>
 <hr style="height: 1px; border: 0; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);" />

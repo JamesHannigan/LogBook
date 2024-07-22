@@ -10,6 +10,7 @@ namespace LogBook.Data.Models
     public class Project : IBaseEntity
     {
         public int Id { get; set; }
+        public Guid PublicId { get; set; } = Guid.NewGuid();
         public DateTime? Deleted { get; set; }
         public string? Name { get; set; }
         public string? ApiKey { get; set; }

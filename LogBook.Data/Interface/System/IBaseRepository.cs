@@ -1,4 +1,6 @@
-﻿namespace LogBook.DataLayer.Interfaces
+﻿using LogBook.Data.Models;
+
+namespace LogBook.DataLayer.Interfaces
 {
     public interface IBaseRepository<TEntity>
     {

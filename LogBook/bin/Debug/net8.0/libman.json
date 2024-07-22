@@ -5,6 +5,22 @@
     {
       "library": "bootstrap@5.3.3",
       "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "moment.js@2.30.1",
+      "destination": "wwwroot/lib/moment.js/"
+    },
+    {
+      "library": "bootstrap-daterangepicker@3.0.5",
+      "destination": "wwwroot/lib/bootstrap-daterangepicker/"
+    },
+    {
+      "library": "font-awesome@6.5.2",
+      "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "library": "sweetalert2@11.12.2",
+      "destination": "wwwroot/lib/sweetalert2/"
     }
   ]
 }

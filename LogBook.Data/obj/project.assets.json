@@ -4280,19 +4280,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\james_4f2zzjl\\.nuget\\packages\\": {}
+    "C:\\Users\\James - Personal\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.Data\\LogBook.Data.csproj",
+      "projectUniqueName": "D:\\LogBook 22-07-2024\\LogBook.Data\\LogBook.Data.csproj",
       "projectName": "LogBook.Data",
-      "projectPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.Data\\LogBook.Data.csproj",
-      "packagesPath": "C:\\Users\\james_4f2zzjl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookNew\\LogBook.Data\\obj\\",
+      "projectPath": "D:\\LogBook 22-07-2024\\LogBook.Data\\LogBook.Data.csproj",
+      "packagesPath": "C:\\Users\\James - Personal\\.nuget\\packages\\",
+      "outputPath": "D:\\LogBook 22-07-2024\\LogBook.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\james_4f2zzjl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\James - Personal\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
