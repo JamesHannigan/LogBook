@@ -1067,7 +1067,10 @@
           "Microsoft.AspNetCore.Identity": "2.2.0"
         },
         "runtime": {
-          "LogBook.BusinessLogic.dll": {}
+          "LogBook.BusinessLogic.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "LogBook.Data/1.0.0": {
@@ -1077,7 +1080,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6"
         },
         "runtime": {
-          "LogBook.Data.dll": {}
+          "LogBook.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -9,5 +9,7 @@
         public int LogTypesCount { get; set; }
         public int LogsCount { get; set; }
         public int AssigneesCount { get; set; }
+        public List<LogTypeDTO> LogTypes { get; set; } = new();
+        public List<AssigneeDTO> Assignees { get; set; } = new();
     }
 }

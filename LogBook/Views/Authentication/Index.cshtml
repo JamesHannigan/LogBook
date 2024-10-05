@@ -1,6 +1,6 @@
 ﻿<script src="/js/Authentication.js" asp-append-version="true"></script>
 
-<div class="container mt-5">
+<div class="container mt-2">
     <!-- Login Form -->
     <div id="loginForm" class="row justify-content-center">
         <div class="col-md-6">
@@ -48,21 +48,38 @@
                         <div class="col-2"></div>
                     </div>
                 </div>
-                <div class="card-body">
-                    <form>
+                <div class="card-body p-0">
+                    <div id="registerErrorMessages" class="bg-danger text-center small w-100 p-2 d-none">
+
+                    </div>
+                    <form id="registerFormData" class="p-3" method="post" enctype="multipart/form-data" onsubmit="event.preventDefault();">
                         <div class="mb-3">
                             <label for="registerEmail" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="registerEmail" aria-describedby="emailHelp">
+                            <input name="emailAddress" type="email" class="form-control" id="registerEmail" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerUserName" class="form-label">User Name</label>
+                            <input name="userName" type="text" class="form-control" id="registerUserName" aria-describedby="userNameHelp">
+                        </div>
+                        <div class="row mb-3 px-3">
+                            <div class="col p-0">
+                                <label for="registerFirstName" class="form-label">First Name</label>
+                                <input name="firstName" type="text" class="form-control" id="registerFirstName" aria-describedby="firstNameHelp">
+                            </div>
+                            <div class="col p-0">
+                                <label for="registerLastName" class="form-label">Last Name</label>
+                                <input name="lastName" type="text" class="form-control" id="registerLastName" aria-describedby="lastNameHelp">
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="registerPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="registerPassword">
+                            <input name="password" type="password" class="form-control" id="registerPassword">
                         </div>
                         <div class="mb-3">
                             <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
                             <input type="password" class="form-control" id="registerConfirmPassword">
                         </div>
-                        <button type="submit" class="btn btn-success w-100">Register</button>
+                        <button onclick="submitRegisterForm()" class="btn btn-success w-100">Register</button>
                     </form>
                 </div>
             </div>

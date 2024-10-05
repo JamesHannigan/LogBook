@@ -3,7 +3,9 @@ using LogBook.Data.DTOs.Data;
 using LogBook.Data.Enum;
 using LogBook.Data.Interface.Data;
 using LogBook.Data.Models;
+using LogBook.Data.Repository.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Identity.Client;
 using System.Web;
 
 namespace LogBook.BusinessLogic.Service.Data
@@ -86,6 +88,32 @@ namespace LogBook.BusinessLogic.Service.Data
 
         public List<ProjectDTO> GetAssignedProjects(string userId) => _projectRepository.GetAssignedProjects(userId);
 
+        public async Task InviteUserToProject(string applicationUser, string userNameOrEmail, Guid projectGUID)
+        {
+            Project? project = _projectRepository.GetProjectByGuid(projectGUID);
+            if (project != null)
+            {
+                ApplicationUser? assignee = await _userManager.FindByNameAsync(userNameOrEmail);
+                if (assignee == null) assignee = await _userManager.FindByEmailAsync(userNameOrEmail);
+
+                try
+                {
+                    await _projectAssignmentRepository.InsertAndCommit(new()
+                    {
+                        AssigneeId = assignee?.Id,
+                        InvitedById = applicationUser,
+                        ProjectId = project.Id,
+                        //Project = project,
+                        RoleType = ProjectRole.Member
+                    });
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
+
         public void RemoveProject(Guid projectGuid, string userId)
         {
             //Get project
@@ -99,11 +127,32 @@ namespace LogBook.BusinessLogic.Service.Data
                 _projectRepository.SoftDelete(project);
                 _projectRepository.CommitChanges();
             }
+        }
 
-            //delete
-            //_projectRepository.SoftDelete(userId);
-            
-            //update
+        public ProjectDTO GetProjectWithDataAsync(Guid projectGUID)
+        {
+            ProjectDTO project = _projectRepository.GetProjectWithData(projectGUID);
+            List<LogType> logTypes = _logTypeRepository.GetLogTypesByProject(project.Id);
+            project.LogTypes = logTypes
+                .Select(l => new LogTypeDTO() { Id = l.Id, Created = l.Created, Level = l.Level, Name = l.Name })
+                .ToList();
+            project.Assignees = _projectAssignmentRepository.GetAssignedUsersByProject(project.Id);
+            return project;
+        }
+
+        public void CreateLogType(string name, TypeLevel level, Guid projectGuid)
+        {
+            Project? project = _projectRepository.GetProjectByGuid(projectGuid);
+            if (project != null)
+            {
+                try {
+                    _logTypeRepository.InsertAndCommit(new LogType() { Name = name, ProjectId = project.Id, Level = level });
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
         }
     }
 }

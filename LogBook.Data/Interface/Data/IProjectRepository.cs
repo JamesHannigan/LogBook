@@ -10,5 +10,6 @@ namespace LogBook.Data.Interface.Data
         List<ProjectDTO> GetAssignedProjectsWithData();
         Project? GetProjectByAPIKey(string apiKey);
         Project? GetProjectByGuid(Guid projectGuid);
+        ProjectDTO GetProjectWithData(Guid projectID);
     }
 }

@@ -5,6 +5,6 @@ namespace LogBook.Data.Interface.Data
 {
     public interface ILogTypeRepository : IBaseRepository<LogType>
     {
-
+        List<LogType> GetLogTypesByProject(int projectID);
     }
 }

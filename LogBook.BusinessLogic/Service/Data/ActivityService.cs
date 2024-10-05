@@ -68,7 +68,8 @@ namespace LogBook.BusinessLogic.Service.Data
         {
             DateTime now = DateTime.UtcNow;
             DateTime start = !string.IsNullOrWhiteSpace(startDate) ? DateTime.Parse(startDate) : new (now.Year, now.Month, now.Day, 0, 0, 0, 0);
-            DateTime end = !string.IsNullOrWhiteSpace(endDate) ? DateTime.Parse(endDate) : new (now.Year, now.Month, now.Day, 23, 59, 59, 999);
+            DateTime endTemp = !string.IsNullOrWhiteSpace(endDate) ? DateTime.Parse(endDate) : new (now.Year, now.Month, now.Day, 23, 59, 59, 999);
+            DateTime end = new(endTemp.Year, endTemp.Month, endTemp.Day, 23, 59, 59, 999);
 
             List<TypeLevel>? logTypes = !string.IsNullOrWhiteSpace(logTypesString) ? logTypesString.Split(',').Select(l => (TypeLevel)Int32.Parse(l)).ToList() : null;
             List<Guid>? projects = !string.IsNullOrWhiteSpace(projectsString) ? projectsString.Split(',').Select(p => Guid.Parse(p)).ToList() : null;

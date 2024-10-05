@@ -3718,19 +3718,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\James - Personal\\.nuget\\packages\\": {}
+    "C:\\Users\\james_4f2zzjl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LogBook 22-07-2024\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookJuly24\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
       "projectName": "LogBook.BusinessLogic",
-      "projectPath": "D:\\LogBook 22-07-2024\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
-      "packagesPath": "C:\\Users\\James - Personal\\.nuget\\packages\\",
-      "outputPath": "D:\\LogBook 22-07-2024\\LogBook.BusinessLogic\\obj\\",
+      "projectPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookJuly24\\LogBook.BusinessLogic\\LogBook.BusinessLogic.csproj",
+      "packagesPath": "C:\\Users\\james_4f2zzjl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookJuly24\\LogBook.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\James - Personal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\james_4f2zzjl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3744,8 +3744,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\LogBook 22-07-2024\\LogBook.Data\\LogBook.Data.csproj": {
-              "projectPath": "D:\\LogBook 22-07-2024\\LogBook.Data\\LogBook.Data.csproj"
+            "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookJuly24\\LogBook.Data\\LogBook.Data.csproj": {
+              "projectPath": "C:\\Users\\james_4f2zzjl\\source\\repos\\LogBookJuly24\\LogBook.Data\\LogBook.Data.csproj"
             }
           }
         }
@@ -3786,7 +3786,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

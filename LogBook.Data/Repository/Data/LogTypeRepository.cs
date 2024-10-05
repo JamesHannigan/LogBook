@@ -10,5 +10,10 @@ namespace LogBook.Data.Repository.Data
         public LogTypeRepository(ApplicationDbContext context) : base(context)
         {
         }
+
+        public List<LogType> GetLogTypesByProject(int projectID)
+        {
+            return _context.Set<LogType>().AsQueryable().Where(p => p.Deleted == null && p.ProjectId == projectID).ToList();
+        }
     }
 }

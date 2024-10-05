@@ -1,1 +1,28 @@
-﻿
+﻿<script src="/js/System/Project.js" asp-append-version="true"></script>
+
+<h5 class="display-6 fw-semibold">Project: <span id="projectName"></span></h5>
+
+<hr style="height: 1px; border: 0; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);" />
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>Log Types</h4>
+            <div id="projectLogTypes"></div>
+            <h7 class="fw-bold">Add a new log type below</h7>
+            <form class="w-50" hx-post="/Configuration/CreateLogType">
+                <input id="logTypeProjectGUID" name="projectGUID" type="hidden" />
+                <input class="form-control w-100" type="text" id="name" name="name" placeholder="Enter name of new Log Type">
+            </form>
+        </div>
+        <div class="col">
+            <h4>Assigned Users</h4>
+            <div id="projectAssignees"></div>
+            <h7 class="fw-bold">Send an invitation by entering a username or email below</h7>
+            <form class="w-50" hx-post="/Configuration/InviteUser">
+                <input id="projectGUID" name="projectGUID" type="hidden" />
+                <input class="form-control w-100" type="text" id="username" name="username" placeholder="Enter Username or Email">
+            </form>
+        </div>
+    </div>
+</div>

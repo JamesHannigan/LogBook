@@ -18,7 +18,7 @@ namespace LogBook.BusinessLogic.Service.System
             _userManager = userManager;
         }
 
-        public async Task RegisterUser(string username, string firstName, string lastName, string emailAddress, string password)
+        public async Task<List<string>> RegisterUser(string username, string firstName, string lastName, string emailAddress, string password)
         {
             ApplicationUser user = new ApplicationUser { 
                 UserName = username, 
@@ -27,14 +27,13 @@ namespace LogBook.BusinessLogic.Service.System
                 Email = emailAddress, 
                 Registered = DateTime.UtcNow 
             };
-            try
-            {
-                IdentityResult result = await _userManager.CreateAsync(user, password);
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
+
+            //Check if user exists
+            ApplicationUser? userExists = await _userManager.FindByEmailAsync(emailAddress);
+            if (userExists != null) return new List<string>() { "Email Address already exists" };
+
+            IdentityResult result = await _userManager.CreateAsync(user, password);
+            return result.Errors.Select(e => e.Description).ToList();
         }
 
         public async Task<bool> SignIn(string userNameOrEmail, string password, bool isPersistent)
