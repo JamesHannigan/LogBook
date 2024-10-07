@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LogBook.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e3b92bcad482bfe1adff7002297f4687dea35dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be7f98ea4be850423a0475b10bc2cd54d813ebed")]
 [assembly: System.Reflection.AssemblyProductAttribute("LogBook.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LogBook.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

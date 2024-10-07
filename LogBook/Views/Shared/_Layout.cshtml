@@ -48,12 +48,15 @@
                         @if (User.Identity != null && User.Identity.IsAuthenticated)
                         {
                             <li class="mb-1 ms-2">
-                                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
+                                @* <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
                                     Dashboard
                                 </button>
                                     <div class="collapse @(ViewData["NavigationControl"]?.ToString() == "Home" ? "show" : "")" id="dashboard-collapse">
-                                    <ul id="navigationDashboardList" class="btn-toggle-nav list-unstyled fw-normal ps-4 pb-1 small"></ul>
-                                </div>
+                                    <ul id="navigationDashboardList" class="btn-toggle-nav list-unstyled fw-normal ps-4 pb-1 small"></ul> 
+                                </div>*@
+                                <a class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0" href="/">
+                                    Dashboard
+                                </a>
                             </li>
                             <li class="mb-1 ms-2">
                                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#logs-collapse" aria-expanded="false">

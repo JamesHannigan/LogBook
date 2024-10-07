@@ -3,10 +3,7 @@ using LogBook.Data.DTOs.Data;
 using LogBook.Data.Enum;
 using LogBook.Data.Interface.Data;
 using LogBook.Data.Models;
-using LogBook.Data.Repository.Data;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Identity.Client;
-using System.Web;
 
 namespace LogBook.BusinessLogic.Service.Data
 {

@@ -9,15 +9,12 @@ namespace LogBook.BusinessLogic.Service.Data
     {
         private readonly IActivityRepository _activityRepository;
         private readonly IProjectRepository _projectRepository;
-        private readonly ILogTypeRepository _logTypeRepository;
         public ActivityService(
             IActivityRepository activityRepository, 
-            IProjectRepository projectRepository,
-            ILogTypeRepository logTypeRepository)
+            IProjectRepository projectRepository)
         {
             _activityRepository = activityRepository;
             _projectRepository = projectRepository;
-            _logTypeRepository = logTypeRepository;
         }
 
         public async Task LogActivity(int? type, string? description, int? userId, string? userName, string? userEmail, string? path)
