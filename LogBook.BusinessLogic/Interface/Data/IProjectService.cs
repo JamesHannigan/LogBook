@@ -7,7 +7,7 @@ namespace LogBook.BusinessLogic.Interface.Data
     public interface IProjectService
     {
         void CreateLogType(string name, TypeLevel level, Guid projectGuid);
-        Task CreateProject(string name, string userId);
+        Task<Guid> CreateProject(string name, string userId);
         List<ProjectDTO> GetAssignedProjects(string id);
         string GetProjectsHTML();
         ProjectDTO GetProjectWithDataAsync(Guid projectGUID);

@@ -1,12 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LogBook.BusinessLogic.Interface.Data;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LogBook.Controllers
 {
-    public class DashboardController : Controller
+    [Authorize]
+    public class DashboardController : BaseController
     {
-        public IActionResult Index()
+        private readonly IActivityService _activityService;
+        public DashboardController(IActivityService activityService)
         {
-            return View();
+            _activityService = activityService;
         }
+
+        public IActionResult Index() => View();
+
+        public int GetNumber(int preset) => _activityService.GetNumberOfActivites(preset, UserId);
+
+        //Get Graph Dataset
+
+
+        //Get Logs Dataset
+
     }
 }

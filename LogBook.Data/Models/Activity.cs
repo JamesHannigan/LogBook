@@ -1,4 +1,5 @@
 ﻿using LogBook.DataLayer.Interfaces;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace LogBook.Data.Models
 {
     public class Activity : IBaseEntity
@@ -20,5 +21,11 @@ namespace LogBook.Data.Models
         public Project? Project { get; set; }
         public int? TenantId { get; set; }
         public Tenant? Tenant { get; set; }
+
+        [NotMapped]
+        public DateTime TimeStampDateTime => Timestamp.HasValue ? Timestamp.Value : Created;
+
+        [NotMapped]
+        public string TimeStampText => TimeStampDateTime.ToString("dd/MM/yyyy HH:mm");
     }
 }

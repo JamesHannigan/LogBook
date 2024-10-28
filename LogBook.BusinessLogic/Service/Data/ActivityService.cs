@@ -1,7 +1,7 @@
-﻿using LogBook.BusinessLogic.Interface.Data;
-using LogBook.Data.Enum;
-using LogBook.Data.Interface.Data;
+﻿using LogBook.Data.Enum;
 using LogBook.Data.Models;
+using LogBook.Data.Interface.Data;
+using LogBook.BusinessLogic.Interface.Data;
 
 namespace LogBook.BusinessLogic.Service.Data
 {
@@ -17,26 +17,23 @@ namespace LogBook.BusinessLogic.Service.Data
             _projectRepository = projectRepository;
         }
 
+        public async Task LogActivity(Activity activity) => await _activityRepository.InsertAndCommit(activity);
+
+        public async Task LogActivities(List<Activity> activities) => await _activityRepository.InsertBatchAndCommit(activities);
+
         public async Task LogActivity(int? type, string? description, int? userId, string? userName, string? userEmail, string? path)
         {
-            try
-            {
-                await _activityRepository.InsertAndCommit(
-                    new Activity()
-                    {
-                        LogTypeId = type,
-                        Description = description,
-                        UserID = userId,
-                        UserName = userName,
-                        UserEmail = userEmail,
-                        Path = path,
-                        ProjectId = 1 //Testing
-                    });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            await _activityRepository.InsertAndCommit(
+                new Activity()
+                {
+                    LogTypeId = type,
+                    Description = description,
+                    UserID = userId,
+                    UserName = userName,
+                    UserEmail = userEmail,
+                    Path = path,
+                    ProjectId = 1 //Testing
+                });
         }
 
         public async Task LogError(int? type, string? description, int? userId, string? userName, string? userEmail, string? path)
@@ -74,7 +71,7 @@ namespace LogBook.BusinessLogic.Service.Data
             List<Activity> activities = _activityRepository.GetLogsByFilters(start, end, projects, logTypes);
             return string.Join("", activities
                 .OrderByDescending(a => a.Created)
-                .Select(a => $"<tr><td>{(a.LogType != null ? a.LogType.Name : "")}</td><td>{a.Description}</td><td>{a.Path}</td><td>{(a.Project != null ? a.Project.Name : "")}</td><td>{a.UserName}</td><td>{a.Created.ToString("dd/MM/yyyy HH:mm")}</td></tr>")
+                .Select(a => $"<tr><td>{(a.LogType != null ? a.LogType.Name : "")}</td><td>{a.Description}</td><td>{a.Path}</td><td>{(a.Project != null ? a.Project.Name : "")}</td><td>{a.UserName}</td><td>{a.TimeStampText}</td></tr>")
                 );
         }
 
@@ -93,6 +90,25 @@ namespace LogBook.BusinessLogic.Service.Data
             filters.Types = logTypes.Select(t => new FilterObject { Id = ((int)t).ToString(), Name = t.ToString() }).ToList();
 
             return filters;
+        }
+
+        public int GetNumberOfActivites(int presetId, string userId)
+        {
+            //GET PRESET DATA CONFIGURATIONS
+            string? projectsString = "34A28492-D7C1-487C-A024-F3E342451341";
+
+            //WHEN GETTING THE PROJECT, CHECK IF USER EXISTS ON PRESET
+
+            string? logTypesString = "1";
+
+            //GET DASHBOARD DATE RANGE
+            DateTime start = DateTime.Now.AddDays(-7);
+            DateTime end = DateTime.Now;
+
+            List<TypeLevel>? logTypes = !string.IsNullOrWhiteSpace(logTypesString) ? logTypesString.Split(',').Select(l => (TypeLevel)Int32.Parse(l)).ToList() : null;
+            List<Guid>? projects = !string.IsNullOrWhiteSpace(projectsString) ? projectsString.Split(',').Select(p => Guid.Parse(p)).ToList() : null;
+
+            return _activityRepository.GetNumberOfLogsByFilters(start, end, projects, logTypes);
         }
     }
 

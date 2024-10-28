@@ -25,7 +25,7 @@ namespace LogBook.BusinessLogic.Service.Data
             _projectAssignmentRepository = projectAssignmentRepository;
         }
 
-        public async Task CreateProject(string name, string userId)
+        public async Task<Guid> CreateProject(string name, string userId)
         {
             string apiKey = "";
             bool isApiKeyUnique = true;
@@ -45,9 +45,7 @@ namespace LogBook.BusinessLogic.Service.Data
 
             Project newProject = new() { Name = name, ApiKey = apiKey };
             int newProjectId = await _projectRepository.InsertAndCommit(newProject);
-            //Test if this works
-            try
-            {
+            
                 await _logTypeRepository.Insert(new LogType() { Name = "Page Visit", ProjectId = newProjectId, Level = TypeLevel.Information });
                 await _logTypeRepository.Insert(new LogType() { Name = "Information Log", ProjectId = newProjectId, Level = TypeLevel.Information });
                 await _logTypeRepository.Insert(new LogType() { Name = "Error Reported", ProjectId = newProjectId, Level = TypeLevel.Severe });
@@ -62,11 +60,8 @@ namespace LogBook.BusinessLogic.Service.Data
                     RoleType = ProjectRole.Creator,
                     AssigneeId = userId
                 });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
+
+                return newProject.PublicId;
         }
 
         public string GetProjectsHTML()

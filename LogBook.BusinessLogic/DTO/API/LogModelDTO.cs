@@ -1,10 +1,10 @@
-﻿namespace LogBook.API.Models
+﻿namespace LogBook.BusinessLogic.DTO.API
 {
-    public class LogModel
+    public class LogModelDTO
     {
-        public string Key { get; set; }
+        public required string APIKey { get; set; }
         public string? Description { get; set; }
-        public double Value { get; set; }
+        public double? Value { get; set; }
         public string? Path { get; set; }
         public int? LogTypeId { get; set; }
         public string? LogTypeName { get; set; }

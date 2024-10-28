@@ -1,9 +1,11 @@
 ﻿using LogBook.BusinessLogic.Interface.Data;
 using LogBook.Data.Enum;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LogBook.Controllers
 {
+    [Authorize]
     public class ConfigurationController : BaseController
     {
         public IProjectService _projectService { get; set; }
@@ -21,7 +23,7 @@ namespace LogBook.Controllers
         public string GetProjects() => _projectService.GetProjectsHTML();
 
         [HttpPost]
-        public async Task CreateProject(string name) => await _projectService.CreateProject(name, UserId);
+        public async Task<Guid> CreateProject(string name) => await _projectService.CreateProject(name, UserId);
 
         [HttpPost]
         public async Task InviteUser(string username, Guid projectGUID) => await _projectService.InviteUserToProject(UserId, username, projectGUID);

@@ -1,5 +1,6 @@
 ﻿using LogBook.BusinessLogic.Interface.System;
 using LogBook.Data.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using System.Net.Mail;
 
@@ -18,7 +19,23 @@ namespace LogBook.BusinessLogic.Service.System
             _userManager = userManager;
         }
 
-        public async Task<List<string>> RegisterUser(string username, string firstName, string lastName, string emailAddress, string password)
+        public async Task<List<string>> RegisterUser(HttpRequest request)
+        {
+            string? userName = request.Form["userName"];
+            string? emailAddress = request.Form["emailAddress"];
+            string? firstName = request.Form["firstName"];
+            string? lastName = request.Form["lastName"];
+            string? password = request.Form["password"];
+            List<string> result = await CreateUser(userName, firstName, lastName, emailAddress, password);
+
+            if (result.Count == 0)
+            {
+                bool signInSuccess = await SignIn(userName, password, true);
+            }
+            return result;
+        }
+
+        public async Task<List<string>> CreateUser(string username, string firstName, string lastName, string emailAddress, string password)
         {
             ApplicationUser user = new ApplicationUser { 
                 UserName = username, 

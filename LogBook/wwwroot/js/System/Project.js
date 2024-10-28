@@ -10,7 +10,7 @@ $(document).ready(function () {
         type: 'GET',
         success: function (data) {
             console.log(data);
-            $("#projectName").text(data.name);
+            $("#projectName").val(data.name);
             data.logTypes.forEach(l => {
                 $("#projectLogTypes").append(`<p>${l.name}</p>`);
             });

@@ -1,5 +1,4 @@
 ﻿using LogBook.BusinessLogic.Interface.System;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LogBook.Controllers
@@ -11,24 +10,7 @@ namespace LogBook.Controllers
         public IActionResult Index() => View();
 
         [HttpPost]
-        public async Task<JsonResult> RegisterUser()
-        {
-            string userName = HttpContext.Request.Form["userName"];
-            string emailAddress = HttpContext.Request.Form["emailAddress"];
-            string firstName = HttpContext.Request.Form["firstName"];
-            string lastName = HttpContext.Request.Form["lastName"];
-            string password = HttpContext.Request.Form["password"];
-            List<string> result = await _accountService.RegisterUser(userName, firstName, lastName, emailAddress, password);
-            
-            if(result.Count == 0) {
-                bool signInSuccess = await _accountService.SignIn(userName, password, true);
-            }
-            //else
-            //{
-            //    //return Redirect("/Authentication");
-            //}
-            return Json(result);
-        }
+        public async Task<JsonResult> RegisterUser() => Json(await _accountService.RegisterUser(HttpContext.Request));
 
         [HttpPost]
         public async Task<IActionResult> SignIn()
@@ -44,6 +26,15 @@ namespace LogBook.Controllers
         public async Task<IActionResult> SignOut(){
             await _accountService.SignOut();
             return Redirect("/Authentication");
+        }
+
+        public async Task<IActionResult> Hi()
+        {
+            if(User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                Console.WriteLine();
+            }
+            return View();
         }
     }
 }

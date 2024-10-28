@@ -2,6 +2,42 @@
     document.location.href = "/Configuration/Project?id=" + id;
 }
 
+function createNewProjectModel() {
+    Swal.fire({
+        title: "Create a new project",
+        html: `<input class="form-control w-100" type="text" id="createProjectName" placeholder="Project Name">`,
+        showCancelButton: true,
+        confirmButtonText: "Create"
+    })
+        .then(result => {
+            //AJAX to /Configuration/CreateProject
+            $.ajax({
+                url: `/Configuration/CreateProject?name=${$("#createProjectName").val()}`,
+                contentType: 'application/html; charset=utf-8',
+                type: 'POST',
+                success: function (data) {
+                    console.log(data);
+
+                    location.replace(`/Configuration/Project?id=${data}`);
+
+                    //$("#projectName").val(data.name);
+                    //data.logTypes.forEach(l => {
+                    //    $("#projectLogTypes").append(`<p>${l.name}</p>`);
+                    //});
+                    //data.assignees.forEach(l => {
+                    //    $("#projectAssignees").append(`<p>${l.userName} - ${l.roleName} ${l.inviteAccepted == null ? " - Invitation Not Accepted" : ""}</p>`);
+                    //});
+                },
+                error: function (data) {
+                    Swal.fire({
+                        icon: "error"
+                    });
+                }
+            });
+
+        });
+}
+
 function openProjectModal(id, name, logs, types, users) {
     Swal.fire({
         title: name,

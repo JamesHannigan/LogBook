@@ -21,9 +21,22 @@ namespace LogBook.Data.Repository.Data
                     (!t.Timestamp.HasValue && t.Created > start && t.Created < end))
                 .Where(t => (projectIds == null) || (projectIds != null && projectIds.Contains(t.Project.PublicId)))
                 .Where(t => (logTypes == null) || (logTypes != null && t.LogType != null && logTypes.Contains(t.LogType.Level)))
+                .OrderByDescending(x => x.Timestamp.HasValue ? x.Timestamp.Value : x.Created)
                 .Include(x => x.Project)
                 .Include(x => x.LogType)
                 .ToList();
+        }
+
+        public int GetNumberOfLogsByFilters(DateTime start, DateTime end, List<Guid>? projectIds, List<TypeLevel>? logTypes)
+        {
+            return _context.Logs.AsQueryable()
+                .Where(t => 
+                    (t.Timestamp.HasValue && t.Timestamp.Value > start && t.Timestamp.Value < end) ||
+                    (!t.Timestamp.HasValue && t.Created > start && t.Created < end))
+                .Where(t => (projectIds == null) || (projectIds != null && projectIds.Contains(t.Project.PublicId)))
+                .Where(t => (logTypes == null) || (logTypes != null && t.LogType != null && logTypes.Contains(t.LogType.Level)))
+                .OrderByDescending(x => x.Timestamp.HasValue ? x.Timestamp.Value : x.Created)
+                .Count();
         }
 
         public async Task<List<Activity>> GetActiviesByDateRange(DateTime startDate, DateTime endDate, int? activityType = null, string? userName = null, int? userType = null)

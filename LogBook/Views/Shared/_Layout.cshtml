@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="~/css/System/Navigation.css" asp-append-version="true" />
     @* <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> *@
     <link rel="stylesheet" href="@("https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5.0.16/dark.min.css")">
-    @* <link rel="stylesheet" href="/lib/sweetalert2/sweetalert2.css"></link> *@
+    <link rel="stylesheet" href="/lib/sweetalert2/sweetalert2.css"></link>
     <link rel="stylesheet" type="text/css" href="/lib/bootstrap-daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
@@ -27,7 +27,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/moment.js/moment.min.js"></script>
-    @* <script src="~/lib/sweetalert2/sweetalert2.min.js"></script> *@
+    <script src="~/lib/sweetalert2/sweetalert2.min.js"></script>
     <script src="https://kit.fontawesome.com/ed96f559b9.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/lib/bootstrap-daterangepicker/daterangepicker.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -48,23 +48,22 @@
                         @if (User.Identity != null && User.Identity.IsAuthenticated)
                         {
                             <li class="mb-1 ms-2">
-                                @* <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
-                                    Dashboard
-                                </button>
-                                    <div class="collapse @(ViewData["NavigationControl"]?.ToString() == "Home" ? "show" : "")" id="dashboard-collapse">
-                                    <ul id="navigationDashboardList" class="btn-toggle-nav list-unstyled fw-normal ps-4 pb-1 small"></ul> 
-                                </div>*@
                                 <a class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0" href="/">
                                     Dashboard
                                 </a>
                             </li>
-                            <li class="mb-1 ms-2">
+                            <li id="multipleProjects" class="mb-1 ms-2">
                                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#logs-collapse" aria-expanded="false">
                                     Logs
                                 </button>
-                                    <div class="collapse @(ViewData["NavigationControl"]?.ToString() == "Activity" ? "show" : "")" id="logs-collapse">
+                                <div class="collapse @(ViewData["NavigationControl"]?.ToString() == "Activity" ? "show" : "")" id="logs-collapse">
                                     <ul id="navigationActivityList" class="btn-toggle-nav list-unstyled fw-normal ps-4 pb-1 small"></ul>
                                 </div>
+                            </li>
+                            <li id="singleProject" class="mb-1 ms-2 d-none">
+                                <a class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0" href="/Activity">
+                                    Logs
+                                </a>
                             </li>
                             <li class="mb-1 ms-2">
                                 <a class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0" href="/Configuration">

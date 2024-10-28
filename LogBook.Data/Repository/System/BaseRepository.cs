@@ -26,6 +26,13 @@ namespace LogBook.DataLayer.Repositories
             return entity.Id;
         }
 
+        public async Task<TEntity> InsertCommitAndReturn(TEntity entity)
+        {
+            await _context.Set<TEntity>().AddAsync(entity);
+            await _context.SaveChangesAsync();
+            return entity;
+        }
+
         public async Task InsertBatchAndCommit(List<TEntity> entities)
         {
             foreach(TEntity entity in entities)

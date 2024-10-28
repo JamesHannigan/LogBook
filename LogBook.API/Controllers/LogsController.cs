@@ -1,5 +1,5 @@
-﻿using LogBook.API.Models;
-using LogBook.BusinessLogic.Interface.Data;
+﻿using LogBook.BusinessLogic.DTO.API;
+using LogBook.BusinessLogic.Interface.API;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LogBook.API.Controllers
@@ -8,18 +8,13 @@ namespace LogBook.API.Controllers
     [Route("[controller]")]
     public class LogsController : ControllerBase
     {
-        public IActivityService _activityService { get; set; }
-        public LogsController(IActivityService activityService)
+        public IClientActivityService _activityService { get; set; }
+        public LogsController(IClientActivityService activityService)
         {
             _activityService = activityService;
         }
 
         [HttpPost("Insert")]
-        public async Task Insert([FromForm] LogModel data)
-        {
-            //BODY
-
-            //await _activityService.LogActivity();
-        }
+        public async Task Insert([FromForm] LogModelDTO data) => await _activityService.LogActivity(data);
     }
 }

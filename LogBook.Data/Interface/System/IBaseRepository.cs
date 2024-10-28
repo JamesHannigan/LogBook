@@ -18,5 +18,6 @@ namespace LogBook.DataLayer.Interfaces
         void CommitTransaction();
         void RollbackTransaction();
         void DisposeTransaction();
+        Task<TEntity> InsertCommitAndReturn(TEntity entity);
     }
 }

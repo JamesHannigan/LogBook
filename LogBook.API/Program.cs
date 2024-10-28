@@ -1,4 +1,6 @@
+using LogBook.BusinessLogic.Interface.API;
 using LogBook.BusinessLogic.Interface.Data;
+using LogBook.BusinessLogic.Service.API;
 using LogBook.BusinessLogic.Service.Data;
 using LogBook.Data.Interface.Data;
 using LogBook.Data.Models;
@@ -18,11 +20,11 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionStrings:DefaultConnection")).UseQueryTrackingBehavior(QueryTrackingBehavior.TrackAll), ServiceLifetime.Transient);
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")).UseQueryTrackingBehavior(QueryTrackingBehavior.TrackAll), ServiceLifetime.Transient);
 
 //Services
 builder.Services.AddScoped<IProjectService, ProjectService>();
-builder.Services.AddScoped<IActivityService, ActivityService>();
+builder.Services.AddScoped<IClientActivityService, ClientActivityService>();
 
 //Repositories
 builder.Services.AddScoped<IActivityRepository, ActivityRepository>();
